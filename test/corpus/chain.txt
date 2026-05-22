@@ -1,0 +1,75 @@
+==================
+minimal chain
+==================
+
+chain MyChain {
+    consensus: Tendermint<sig=BLS12_381, finality=Deterministic>
+    gas:       Multidim<{cpu, storage, witness}>
+    state:     SparseMerkle<key=u256, hash=Blake3>
+    exec:      WasmVM<deterministic>
+}
+
+---
+
+(source_file
+  (chain_declaration
+    name: (identifier)
+    (subsystem_assignment
+      key: (subsystem_key)
+      value: (generic_type
+        name: (identifier)
+        (type_parameter key: (identifier) value: (identifier))
+        (type_parameter key: (identifier) value: (identifier))))
+    (subsystem_assignment
+      key: (subsystem_key)
+      value: (generic_type
+        name: (identifier)
+        (type_parameter
+          value: (set_literal
+            (identifier)
+            (identifier)
+            (identifier)))))
+    (subsystem_assignment
+      key: (subsystem_key)
+      value: (generic_type
+        name: (identifier)
+        (type_parameter key: (identifier) value: (identifier))
+        (type_parameter key: (identifier) value: (identifier))))
+    (subsystem_assignment
+      key: (subsystem_key)
+      value: (generic_type
+        name: (identifier)
+        (type_parameter value: (identifier))))))
+
+==================
+empty chain
+==================
+
+chain Empty { }
+
+---
+
+(source_file
+  (chain_declaration
+    name: (identifier)))
+
+==================
+chain with line comments
+==================
+
+// top-level
+chain X {
+    // before subsystem
+    consensus: Aura
+}
+
+---
+
+(source_file
+  (line_comment)
+  (chain_declaration
+    name: (identifier)
+    (line_comment)
+    (subsystem_assignment
+      key: (subsystem_key)
+      value: (named_type (identifier)))))

@@ -1,0 +1,27 @@
+{
+  "name": "tree-sitter-cleave",
+  "version": "0.0.1",
+  "description": "Tree-sitter grammar for the Cleave programming language (.cv files)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cleave-lang/tree-sitter-cleave.git"
+  },
+  "license": "Apache-2.0",
+  "author": "Cleave Labs",
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "cleave",
+    "blockchain"
+  ],
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "test": "tree-sitter test",
+    "parse": "tree-sitter parse"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.24.0"
+  }
+}

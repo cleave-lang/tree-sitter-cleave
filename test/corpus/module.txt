@@ -1,0 +1,48 @@
+==================
+counter module
+==================
+
+module Counter {
+    state count: u64
+
+    gas increment = { cpu: 100, storage: 8 }
+
+    fn increment() -> Result<u64> {
+        count = count + 1
+        Ok(count)
+    }
+}
+
+---
+
+(source_file
+  (module_declaration
+    name: (identifier)
+    (state_declaration
+      name: (identifier)
+      type: (named_type (identifier)))
+    (gas_declaration
+      name: (identifier)
+      value: (record_literal
+        (record_field
+          key: (identifier)
+          value: (number_literal))
+        (record_field
+          key: (identifier)
+          value: (number_literal))))
+    (function_declaration
+      name: (identifier)
+      return_type: (generic_type
+        name: (identifier)
+        (type_parameter value: (identifier)))
+      body: (block
+        (expression_statement
+          (binary_expression
+            left: (identifier)
+            right: (binary_expression
+              left: (identifier)
+              right: (number_literal))))
+        (expression_statement
+          (call_expression
+            callee: (identifier)
+            (identifier)))))))

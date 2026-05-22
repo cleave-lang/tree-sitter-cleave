@@ -1,0 +1,37 @@
+{
+  "grammars": [
+    {
+      "name": "cleave",
+      "camelcase": "Cleave",
+      "scope": "source.cv",
+      "path": ".",
+      "file-types": [
+        "cv"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ],
+  "metadata": {
+    "version": "0.0.1",
+    "license": "Apache-2.0",
+    "description": "Tree-sitter grammar for the Cleave programming language (.cv files)",
+    "authors": [
+      {
+        "name": "Cleave Labs"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/cleave-lang/tree-sitter-cleave.git"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
