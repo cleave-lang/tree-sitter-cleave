@@ -15,13 +15,15 @@ chain MyChain {
   (chain_declaration
     name: (identifier)
     (subsystem_assignment
-      key: (subsystem_key)
+      key: (subsystem_key
+        (identifier))
       value: (generic_type
         name: (identifier)
         (type_parameter key: (identifier) value: (identifier))
         (type_parameter key: (identifier) value: (identifier))))
     (subsystem_assignment
-      key: (subsystem_key)
+      key: (subsystem_key
+        (identifier))
       value: (generic_type
         name: (identifier)
         (type_parameter
@@ -30,13 +32,15 @@ chain MyChain {
             (identifier)
             (identifier)))))
     (subsystem_assignment
-      key: (subsystem_key)
+      key: (subsystem_key
+        (identifier))
       value: (generic_type
         name: (identifier)
         (type_parameter key: (identifier) value: (identifier))
         (type_parameter key: (identifier) value: (identifier))))
     (subsystem_assignment
-      key: (subsystem_key)
+      key: (subsystem_key
+        (identifier))
       value: (generic_type
         name: (identifier)
         (type_parameter value: (identifier))))))
@@ -71,5 +75,6 @@ chain X {
     name: (identifier)
     (line_comment)
     (subsystem_assignment
-      key: (subsystem_key)
+      key: (subsystem_key
+        (identifier))
       value: (named_type (identifier)))))

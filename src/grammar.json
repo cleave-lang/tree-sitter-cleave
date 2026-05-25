@@ -106,29 +106,8 @@
       ]
     },
     "subsystem_key": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "consensus"
-        },
-        {
-          "type": "STRING",
-          "value": "gas"
-        },
-        {
-          "type": "STRING",
-          "value": "state"
-        },
-        {
-          "type": "STRING",
-          "value": "exec"
-        },
-        {
-          "type": "STRING",
-          "value": "da"
-        }
-      ]
+      "type": "SYMBOL",
+      "name": "identifier"
     },
     "module_declaration": {
       "type": "SEQ",
