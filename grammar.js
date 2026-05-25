@@ -46,8 +46,11 @@ module.exports = grammar({
         optional(choice(";", ",")),
       ),
 
-    subsystem_key: ($) =>
-      choice("consensus", "gas", "state", "exec", "da"),
+    // Subsystem keys are arbitrary identifiers (cleave-lang/cleave#64).
+    // The five stdlib axes (consensus, gas, state, exec, da) are
+    // matched here as well; chains can declare any axis they want by
+    // inventing a new identifier.
+    subsystem_key: ($) => $.identifier,
 
     /* ============== module ============== */
 

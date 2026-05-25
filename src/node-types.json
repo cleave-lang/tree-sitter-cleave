@@ -2030,7 +2030,17 @@
   {
     "type": "subsystem_key",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "type_parameter",
@@ -2273,14 +2283,6 @@
     "named": true
   },
   {
-    "type": "consensus",
-    "named": false
-  },
-  {
-    "type": "da",
-    "named": false
-  },
-  {
     "type": "deferred",
     "named": false
   },
@@ -2294,10 +2296,6 @@
   },
   {
     "type": "event",
-    "named": false
-  },
-  {
-    "type": "exec",
     "named": false
   },
   {
